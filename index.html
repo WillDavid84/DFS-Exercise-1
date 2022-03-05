@@ -1,0 +1,34 @@
+<div class="Rebel">REBEL</div>
+<div class="redball"></div>
+
+<style>
+    .Rebel {
+        font-size: 20vw;
+        width: 100vw;
+        line-height: 100vh;
+        text-align: center;
+    }
+
+    .redball {
+        height: 12vw;
+        width: 12vw;
+        background: red;
+        border-radius: 50%;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        transform: translate(-1.30rem, -1.30rem)
+    }
+</style>
+
+<script>
+    var redball = document.querySelector(".redball");
+    window.addEventListener("mousemove", event => {
+
+        var x = event.clientX;
+        var y = event.clientY;
+
+        redball.style.top = y + "px";
+        redball.style.left = x + "px";
+    });
+</script>
